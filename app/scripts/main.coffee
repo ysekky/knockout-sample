@@ -12,7 +12,7 @@ class UserListViewModel
   addUser: () =>
     if @firstNameValue().length is 0 or @lastNameValue().length is 0
       return
-    @users.unshift(User(@firstNameValue(), @lastNameValue()))
+    @users.unshift(new User(@firstNameValue(), @lastNameValue()))
     @firstNameValue("")
     @lastNameValue("")
     return
